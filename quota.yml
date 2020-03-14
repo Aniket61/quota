@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: ResourceQuota
 metadata:
-  name: compute-resources-long-running
+  name: compute-resources
 spec:
   hard:
     pods: "4" 
-    limits.cpu: "4" 
-    limits.memory: "2Gi" 
-  scopes:
-  - NotTerminating 
+    requests.cpu: "1" 
+    requests.memory: 1Gi 
+    limits.cpu: "2" 
+    limits.memory: 2Gi
